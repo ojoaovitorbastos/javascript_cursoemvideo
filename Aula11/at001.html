@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Você é Brasileiro?</title>
+
+    <style>
+      div#ondemoro {
+        margin-top: 15px;
+        width: 100px;
+        height: 50px;
+        background-color: darkgray;
+        text-align: center;
+        justify-content: center;
+        padding-top: 1px;
+        border-radius: 3%;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>Onde você mora?</h1>
+    <input type="text" name="txtpais" id="txtpais" />
+    <input type="button" value="Verificar" onclick="verificar()" />
+    <div id="ondemoro">
+      <p>Você é...</p>
+    </div>
+    <script>
+      function verificar() {
+        var txtp = document.getElementById("txtpais");
+        var ondemoro = document.getElementById("ondemoro");
+        if (txtp.value.toLowerCase() == "brasil") {
+          ondemoro.innerHTML = "Você é Brasileiro!";
+          ondemoro.style.background = "green";
+          ondemoro.style.color = "white";
+        } else {
+          ondemoro.innerHTML = "Você é Estrangeiro.";
+          ondemoro.style.background = "blue";
+          ondemoro.style.color = "white"; 
+        }
+      }
+    </script>
+  </body>
+</html>
